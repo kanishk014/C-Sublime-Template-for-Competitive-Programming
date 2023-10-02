@@ -8,4 +8,7 @@ CppFastOlympicCoding
 
 ```
 SublimeAStyleFormatter
+
+Go to Preferences > Package settings > SublimeAStypeFormatter > Key binds default.
+Now set key bind to Ctrl  + B.
 ```
