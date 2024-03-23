@@ -9,6 +9,6 @@ CppFastOlympicCoding
 ```
 SublimeAStyleFormatter
 
-Go to Preferences > Package settings > SublimeAStypeFormatter > Key binds default.
-Now set key bind to Ctrl  + B.
+Go to Preferences > Package settings > SublimeAStypeFormatter > Settings - Default.
+Set auto_format_on_save = true
 ```
