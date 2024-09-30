@@ -1,5 +1,5 @@
 /*
-Things to keep in mind that are different than brdiges in a graph:
+Things to keep in mind that are different than bridges in a graph:
 
 1. Check for the starting node, if it has more than 1 child which are not visited then it will be an articulation point
 2. Condition for checking articulation point: (low[v] >= time[u] and parent != -1)
@@ -27,7 +27,8 @@ class Solution {
             if (visited[v] == false) {
                 dfs(adj, v, visited, low, currTime, u);
                 low[u] = min(low[u], low[v]);
-                
+
+                // Condition for checking if a node v can reach before u
                 if (low[v] >= currTime[u] and par != -1) {
                     ans.insert(u);
                 }
@@ -35,10 +36,12 @@ class Solution {
                 child++;
             }
             else {
+                // Not taking low[v] values of visited nodes, rather take their currTime[v].
                 low[u] = min(low[u], currTime[v]);
             }
         }
-        
+
+      // Check for whether starting node has more than 1 child that are unvisited.
         if (child > 1 and par == -1) {
             ans.insert(u);
         }
